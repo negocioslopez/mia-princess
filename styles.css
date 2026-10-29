@@ -50,3 +50,15 @@ body{background:var(--cream)}
 .hero-route-strip a:hover{transform:translateY(-3px)}
 @media(max-width:900px){.hero-2027{grid-template-columns:1fr;padding:40px 6% 180px}.hero-2027 .hero-content{padding:10px 0}.hero-2027 .hero-showcase{min-height:440px}.hero-cow{width:280px;right:20%;top:0}.hero-cheese{width:75%;height:50%;right:8%;bottom:0}.hero-route-strip{grid-template-columns:1fr;bottom:16px;gap:8px}.hero-route-strip a{padding:9px 14px}.hero-2027 h1{font-size:clamp(38px,8vw,62px)}}
 @media(max-width:520px){.hero-2027{padding-bottom:215px}.hero-2027 .hero-showcase{min-height:330px}.hero-cow{width:215px;right:17%}.hero-cheese{width:90%;right:1%;height:49%}.hero-highlights{gap:12px}.hero-highlights b{font-size:11px}.hero-2027 .hero-actions{gap:9px}.hero-2027 .btn{width:100%}.hero-2027 h1{letter-spacing:-1.3px}.hero-route-strip{left:5%;right:5%}}
+
+/* Premium hero correction: product-first, mascot as brand seal */
+.hero-2027{grid-template-columns:49% 51%;background:#fffdf4}
+.hero-2027 .hero-bg{background:linear-gradient(90deg,#fffdf6f7 0%,#fffdf6e6 40%,#f3f6e7ad 100%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80') center/cover}
+.hero-2027 .hero-showcase{min-height:580px}
+.hero-2027 .hero-cheese{right:0;bottom:5%;width:100%;height:82%;border-radius:30px;transform:none;background-image:url('https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1200&q=90');background-size:cover;background-position:center;box-shadow:0 22px 60px #20452c28;border:8px solid white}
+.hero-2027 .hero-cow{top:0;right:0;width:140px;z-index:4;background:#fff;border:6px solid #fff;border-radius:50%;filter:drop-shadow(0 8px 16px #193c2c32)}
+.hero-2027 .hero-fresh-tag{bottom:8%;right:4%;background:#fffdf4;color:#156543;font-size:12px}
+.hero-2027 .hero-content{z-index:3}
+.hero-2027 .hero-route-strip a{border:1px solid #e8eee5}
+@media(max-width:900px){.hero-2027{grid-template-columns:1fr}.hero-2027 .hero-showcase{min-height:460px}.hero-2027 .hero-cheese{width:100%;height:85%;right:0}.hero-2027 .hero-cow{width:115px;right:1%}}
+@media(max-width:520px){.hero-2027 .hero-showcase{min-height:340px}.hero-2027 .hero-cow{width:90px}.hero-2027 .hero-cheese{height:85%}.hero-2027 .hero-fresh-tag{font-size:9px}}
