@@ -75,3 +75,30 @@ body{background:var(--cream)}
 .hero-2027 .hero-fresh-tag{font-size:11px}
 @media(max-width:900px){.hero-2027 .hero-showcase{min-height:450px}.hero-2027 .hero-cheese{height:94%;width:100%;right:0;background-position:50% 50%}}
 @media(max-width:520px){.hero-2027{padding-top:20px}.hero-2027 .hero-content{padding:8px 0}.hero-2027 h1{font-size:clamp(34px,9vw,48px);line-height:1.12}.hero-2027 .hero-showcase{min-height:315px}.hero-2027 .hero-cheese{height:100%;width:100%;background-position:54% center;border-radius:18px}.hero-2027 .hero-fresh-tag{bottom:4%;right:3%;font-size:9px}.hero-2027 .hero-route-strip{bottom:12px}.hero-2027 .hero-route-strip a{padding:9px 12px}}
+
+/* Mobile refinement 2026-10-29: compact above-the-fold and legible cards */
+@media(max-width:600px){
+ .hero-2027{padding:12px 5% 208px;gap:0}
+ .hero-2027 .hero-content{padding:8px 0 0}
+ .hero-2027 .eyebrow{font-size:10px;letter-spacing:1.3px}
+ .hero-2027 h1{font-size:clamp(32px,8.2vw,42px);line-height:1.08;letter-spacing:-.9px;margin:12px 0}
+ .hero-2027 .hero-content>p{font-size:13px;line-height:1.55;margin:10px 0}
+ .hero-highlights{gap:8px;margin-top:12px;justify-content:space-between}
+ .hero-highlights span{font-size:15px;gap:5px}
+ .hero-highlights b{font-size:10px}
+ .hero-2027 .hero-actions{margin-top:15px;gap:8px}
+ .hero-2027 .hero-actions .btn{padding:13px 12px;font-size:12px}
+ .hero-2027 .hero-note{font-size:10px;line-height:1.35;margin:8px 0}
+ .hero-2027 .hero-showcase{min-height:270px;margin-top:6px}
+ .hero-2027 .hero-cheese{height:100%;border-radius:16px;background-position:center 48%}
+ .hero-2027 .hero-fresh-tag{font-size:8px;padding:7px 9px}
+ .hero-route-strip{gap:6px}
+ .hero-route-strip a{border-radius:11px}
+ .floating-wa{width:48px;height:48px;right:12px;bottom:14px;font-size:24px}
+ .section{padding-top:52px;padding-bottom:52px}
+ .cards{gap:12px}
+ .card .content{padding:13px}
+ .card h3{font-size:19px;line-height:1.2}
+ .card p{font-size:12px;line-height:1.45}
+}
+@media(prefers-reduced-motion:reduce){.floating-wa{animation:none}}
