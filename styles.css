@@ -118,3 +118,24 @@ body{background:var(--cream)}
 
 /* Portada actualizada: composición artesanal sin yogur ni leche */
 .hero-2027 .hero-cheese{background-image:url('/Quesos%20artesanales%20en%20el%20campo.png');background-position:center;background-size:cover}
+
+/* Motion refinement: tasteful dairy-brand interactions */
+@media(prefers-reduced-motion:no-preference){
+ .hero-2027 .hero-content{animation:mp-rise .85s cubic-bezier(.2,.7,.2,1) both}
+ .hero-2027 .hero-showcase{animation:mp-rise 1s .16s cubic-bezier(.2,.7,.2,1) both}
+ .product-card{transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease}
+ .product-card:hover{transform:translateY(-7px);box-shadow:0 18px 38px #163d2924;border-color:#c6d6c5}
+ .product-image{overflow:hidden;transition:background-size .5s ease,filter .4s ease;background-size:100%}
+ .product-card:hover .product-image{background-size:108%;filter:saturate(1.07)}
+ .btn,.header nav a,.route-cards>div,.hero-route-strip a{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+ .btn:hover,.hero-route-strip a:hover{transform:translateY(-3px)}
+ .route-cards>div:hover{transform:translateX(4px)}
+ .mp-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1);transition-delay:var(--mp-delay,0ms)}
+ .mp-reveal.mp-visible{opacity:1;transform:none}
+ @keyframes mp-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(prefers-reduced-motion:reduce){
+ .mp-reveal{opacity:1!important;transform:none!important}
+ .product-card,.product-image,.btn{transition:none!important}
+}
+@media(hover:none){.product-card:hover{transform:none}.product-card:hover .product-image{background-size:cover}}
