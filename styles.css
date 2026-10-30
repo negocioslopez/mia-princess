@@ -115,3 +115,6 @@ body{background:var(--cream)}
  .header nav .nav-icon{display:inline-grid;place-items:center;width:25px;min-width:25px;font-size:21px;color:#218055}
  .header nav .nav-cta{justify-content:center;background:#069e50!important;color:white!important;border:0;margin-top:12px;min-height:52px;border-radius:12px!important;font-size:15px}
 }
+
+/* Portada actualizada: composición artesanal sin yogur ni leche */
+.hero-2027 .hero-cheese{background-image:url('/Quesos%20artesanales%20en%20el%20campo.png');background-position:center;background-size:cover}
