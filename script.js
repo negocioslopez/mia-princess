@@ -8,3 +8,14 @@ grid.addEventListener("click",e=>{const btn=e.target.closest("[data-product]");i
 document.getElementById("sendOrder").addEventListener("click",()=>{const s=selected();if(!s.length){alert("Selecciona al menos un producto.");return}const name=document.getElementById("customer").value.trim(),zone=document.getElementById("zone").value.trim(),details=document.getElementById("details").value.trim();const message=`Hola, Mía Princess. Quisiera consultar precios y disponibilidad.\n\nProductos:\n${s.map(x=>"• "+x).join("\n")}\n\nNombre: ${name||"No indicado"}\nZona: ${zone||"Por confirmar"}\nCantidades o indicaciones: ${details||"Por confirmar"}\n\n¿Podrían ayudarme con mi pedido y coordinar la entrega?`;window.open("https://wa.me/50375782261?text="+encodeURIComponent(message),"_blank","noopener")});
 const menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("nav");function setMenu(open){mobileNav.classList.toggle("open",open);menuBtn.setAttribute("aria-expanded",String(open));menuBtn.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú");menuBtn.textContent=open?"×":"☰"}menuBtn.addEventListener("click",()=>setMenu(!mobileNav.classList.contains("open")));mobileNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});document.addEventListener("click",e=>{if(!mobileNav.contains(e.target)&&!menuBtn.contains(e.target))setMenu(false)});window.addEventListener("resize",()=>{if(window.innerWidth>800)setMenu(false)});
 document.getElementById("year").textContent=new Date().getFullYear();
+
+/* Progressive enhancements; no dependency and no blocking on older browsers. */
+(function(){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const targets=document.querySelectorAll('.product-card,.section-head,.routes-copy,.routes-art,.about,.family-content,.order-panel,.contact h2');
+ if(!('IntersectionObserver' in window))return;
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('mp-visible');observer.unobserve(entry.target)}});
+ },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+ targets.forEach((el,i)=>{el.classList.add('mp-reveal');el.style.setProperty('--mp-delay',((i%4)*65)+'ms');observer.observe(el)});
+})();
