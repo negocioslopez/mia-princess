@@ -19,3 +19,6 @@ document.getElementById("year").textContent=new Date().getFullYear();
  },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
  targets.forEach((el,i)=>{el.classList.add('mp-reveal');el.style.setProperty('--mp-delay',((i%4)*65)+'ms');observer.observe(el)});
 })();
+
+/* Sonido de la vaquita: solo se reproduce por interacción del visitante. */
+(function(){const btn=document.getElementById('cowSoundBtn'),audio=document.getElementById('cowSound'),status=document.getElementById('cowSoundStatus');if(!btn||!audio)return;btn.addEventListener('click',async()=>{try{audio.currentTime=0;await audio.play();btn.textContent='🔊 Sonando…';status.textContent='¡Muuu! 🐄'}catch(e){status.textContent='El audio aún no está disponible. Intenta más tarde.';btn.textContent='🔊 Escuchar a la vaquita'}});audio.addEventListener('ended',()=>{btn.textContent='🔊 Escuchar otra vez';status.textContent='¡La vaquita te saluda!'});audio.addEventListener('error',()=>{status.textContent='Falta publicar el archivo de audio en el sitio.'})})();
