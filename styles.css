@@ -139,3 +139,8 @@ body{background:var(--cream)}
  .product-card,.product-image,.btn{transition:none!important}
 }
 @media(hover:none){.product-card:hover{transform:none}.product-card:hover .product-image{background-size:cover}}
+
+/* Vaquita: reproducción voluntaria, accesible y sin autoplay */
+.cow-sound-btn{margin:12px auto 8px;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1d754e;color:#fff;border:0;border-radius:999px;padding:13px 24px;font-weight:800;font-size:14px;cursor:pointer;box-shadow:0 7px 20px #174e3425;transition:transform .2s,background .2s}
+.cow-sound-btn:hover{background:#145e3d;transform:translateY(-2px)}.cow-sound-btn:focus-visible{outline:3px solid #d6a94f;outline-offset:3px}.cow-sound-btn:disabled{opacity:.6;cursor:wait}
+@media(prefers-reduced-motion:reduce){.cow-sound-btn{transition:none}.cow-sound-btn:hover{transform:none}}
